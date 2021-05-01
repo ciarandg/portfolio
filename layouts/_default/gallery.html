@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <div class="index-content">
+        {{ .Content }}
+    </div>
+
+    <h1>{{ .Title }}</h1>
+    {{ $pages := where site.RegularPages "Params.gallery" true}}
+    {{ range $pages }}
+        <div class="gallery-post-list">
+            <hr />
+            <h2 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+		    {{ .Content }}
+            {{ partial "articleInfoFull.html" . }}
+        </div>
+    {{ end }}
+
+{{ end }}
