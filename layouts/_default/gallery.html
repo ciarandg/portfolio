@@ -10,6 +10,7 @@
             <hr />
             <h2 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 		    {{ .Content }}
+            {{ partial "downloadLinks.html" . }}
             {{ partial "articleInfoFull.html" . }}
         </div>
     {{ end }}

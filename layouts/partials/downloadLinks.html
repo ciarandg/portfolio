@@ -1,0 +1,5 @@
+<div class="download-links">
+    {{ range $link:= .Params.downloads }}
+        <h3>{{ $link | markdownify }}</h3>
+    {{ end }}
+</div>
