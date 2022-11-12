@@ -9,7 +9,8 @@ metadata:
 
 spec:
   rules:
-    - host: {{ .Values.domain }}
+    {{- range .Values.domains }}
+    - host: {{ . }}
       http:
           paths:
             - path: /
@@ -19,7 +20,10 @@ spec:
                   name: {{ .Release.Name }}-service
                   port:
                     number: {{ .Values.servicePort }}
+    {{- end }}
   tls:
     - secretName: {{ .Release.Name }}-tls
       hosts:
-        - {{ .Values.domain }}
+        {{- range .Values.domains }}
+        - {{ . }}
+        {{- end }}
