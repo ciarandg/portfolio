@@ -1,0 +1,25 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: {{ .Release.Name }}-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
+
+spec:
+  rules:
+    - host: {{ .Values.domain }}
+      http:
+          paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: {{ .Release.Name }}-service
+                  port:
+                    number: {{ .Values.servicePort }}
+  tls:
+    - secretName: {{ .Release.Name }}-tls
+      hosts:
+        - {{ .Values.domain }}

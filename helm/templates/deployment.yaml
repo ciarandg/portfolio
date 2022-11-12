@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Release.Name }}-deployment"
+spec:
+  selector:
+    matchLabels:
+      app: portfolio
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      containers:
+        - name: portfolio-server
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+      imagePullSecrets:
+        - name: regcred
