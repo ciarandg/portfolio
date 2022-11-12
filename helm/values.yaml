@@ -11,6 +11,6 @@ image:
 
 servicePort: 5679
 
-domains: [ "ciarandg.com", "www.ciarandg.com" ]
+domains: [ "ciarandg.com", "www.ciarandg.com", "ciarandegroot.com", "www.ciarandegroot.com" ]
 acme:
   email: "ciaran.deg@gmail.com"
