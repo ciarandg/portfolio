@@ -19,6 +19,9 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          {{ if .Values.image.pullPolicy }}
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+          {{ else }}
+          {{ end }}
       imagePullSecrets:
         - name: regcred
