@@ -59,6 +59,7 @@ jobs:
           tags: |
             type=ref,event=branch
             type=raw,value=${{ github.event.repository.updated_at }}
+            type=raw,value=latest,enable={{is_default_branch}}
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
