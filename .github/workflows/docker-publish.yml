@@ -18,8 +18,6 @@ on:
 env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
-  TAGS: ${{ github.repository }}:latest
-
 
 jobs:
   build:
@@ -58,6 +56,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=raw,value=${{ github.event.repository.updated_at }}
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
