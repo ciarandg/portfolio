@@ -6,8 +6,8 @@ draft: false
 tags: ["linux", "nixos", "nix"]
 gallery: false
 downloads: [
-  "[NixOS Config](https://github.com/ciarandeg/nixos-config)",
-  "[Home-Manager Config](https://github.com/ciarandeg/nix-home)"
+  "[NixOS Config](https://github.com/ciarandg/nixos-config)",
+  "[Home-Manager Config](https://github.com/ciarandg/nix-home)"
   ]
 
 ---

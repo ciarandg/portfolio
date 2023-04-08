@@ -5,9 +5,9 @@ draft: false
 tags: ["mod", "openal", "kotlin", "java", "interactive"]
 gallery: true
 downloads: [
-    '[Source Code](https://github.com/ciarandeg/SoundBounds)',
+    '[Source Code](https://github.com/ciarandg/SoundBounds)',
     '[CurseForge](https://www.curseforge.com/minecraft/mc-mods/soundbounds)',
-    '[Wiki](https://github.com/ciarandeg/SoundBounds/wiki)'
+    '[Wiki](https://github.com/ciarandg/SoundBounds/wiki)'
 ]
 ---
 

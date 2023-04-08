@@ -4,7 +4,7 @@ date: 2020-11-23
 draft: false
 tags: ["java", "swing"]
 gallery: false
-downloads: ['[Source Code](https://github.com/ciarandeg/Parnassus)']
+downloads: ['[Source Code](https://github.com/ciarandg/Parnassus)']
 ---
 
 Parnassus is a tool for validating notated music according to the rules

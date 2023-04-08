@@ -5,8 +5,8 @@ draft: false
 tags: ["vst", "juce", "c++", "effect", "interactive"]
 gallery: true
 downloads: [
-    '[Source Code](https://github.com/ciarandeg/QuickSand)',
-    '[Binaries](https://github.com/ciarandeg/QuickSand/releases)'
+    '[Source Code](https://github.com/ciarandg/QuickSand)',
+    '[Binaries](https://github.com/ciarandg/QuickSand/releases)'
 ]
 ---
 
