@@ -17,8 +17,9 @@ long-distance swimmer.
 
 Since graduating from the University of British Columbia (BMUS
 2017-2021, minor in Applied Music Technology), I have worked to hone my
-abilities as a developer. In particular, I have a strong interest in
-NixOS, functional programming, DevOps and GitOps.
+abilities as a developer, in both professional and personal capacities.
+In particular, I have a strong interest in NixOS, functional programming,
+and declarative infrastructure management.
 
 ## Skills
 ### Preferred Languages
