@@ -11,6 +11,8 @@ The `helm` directory contains a basic Helm chart for hosting this site via nginx
 
 ### Nix
 
+**Note:** unfortunately, Nix Flakes are currently incompatible with git LFS (which this repo is heavily reliant on), so best practice here is to use the Docker image or Helm chart.
+
 - `pkgs.${system}.portfolio` (also `pkgs.${system}.default`)
   - A derivation containing a static site
     - e.g. `result/index.html`
