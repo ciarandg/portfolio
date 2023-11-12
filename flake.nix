@@ -22,7 +22,7 @@
         buildPhase = ''
           cp -r ${hugo-theme-anubis} ./themes/hugo-theme-anubis
           ${pkgs.hugo}/bin/hugo
-          cp -r public $out
+          mv public $out
         '';
       };
       default = portfolio;
