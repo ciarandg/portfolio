@@ -20,10 +20,9 @@
         name = "portfolio";
         src = ./.;
         buildPhase = ''
+          cp -r ${hugo-theme-anubis} ./themes/hugo-theme-anubis
           ${pkgs.hugo}/bin/hugo
-          mkdir -p $out/themes
-          cp -r public $out/public
-          cp -r ${hugo-theme-anubis}/share $out/public/themes/hugo-theme-anubis
+          cp -r public $out
         '';
       };
       default = portfolio;
