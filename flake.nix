@@ -2,11 +2,13 @@
   inputs.hugo-theme-anubis.url = "github:Mitrichius/hugo-theme-anubis";
   inputs.hugo-theme-anubis.flake = false;
 
-  outputs = { self, nixpkgs, hugo-theme-anubis, ... }: {
-    packages.x86_64-linux.portfolio = let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      lib = nixpkgs.lib;
-      in pkgs.stdenv.mkDerivation {
+  outputs = { self, nixpkgs, hugo-theme-anubis, ... }: let
+    system = "x86_64-linux";
+  in {
+    packages.${system} = let
+      pkgs = nixpkgs.legacyPackages.${system};
+    in rec {
+      portfolio = pkgs.stdenv.mkDerivation {
         name = "portfolio";
         src = ./.;
         buildPhase = ''
@@ -15,6 +17,7 @@
           mv public $out/public
         '';
       };
-    packages.x86_64-linux.default = self.packages.x86_64-linux.portfolio;
+      default = portfolio;
+    };
   };
 }
