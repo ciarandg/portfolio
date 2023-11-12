@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "hugo-theme-anubis": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695061496,
+        "narHash": "sha256-JYThew3Zu0I3SKlEtTpsI2R5lzG4fHzZdPtXcG5WWCg=",
+        "owner": "Mitrichius",
+        "repo": "hugo-theme-anubis",
+        "rev": "01c3a53f124cbf293cbb0e9d10d4b834a0b3db41",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mitrichius",
+        "repo": "hugo-theme-anubis",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1699343069,
@@ -16,6 +32,7 @@
     },
     "root": {
       "inputs": {
+        "hugo-theme-anubis": "hugo-theme-anubis",
         "nixpkgs": "nixpkgs"
       }
     }

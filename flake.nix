@@ -1,5 +1,8 @@
 {
-  outputs = { self, nixpkgs }: {
+  inputs.hugo-theme-anubis.url = "github:Mitrichius/hugo-theme-anubis";
+  inputs.hugo-theme-anubis.flake = false;
+
+  outputs = { self, nixpkgs, hugo-theme-anubis, ... }: {
     packages.x86_64-linux.portfolio = let
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       lib = nixpkgs.lib;
