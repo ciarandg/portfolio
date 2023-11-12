@@ -3,15 +3,16 @@
     "hugo-theme-anubis": {
       "flake": false,
       "locked": {
-        "lastModified": 1695061496,
-        "narHash": "sha256-JYThew3Zu0I3SKlEtTpsI2R5lzG4fHzZdPtXcG5WWCg=",
+        "lastModified": 1591529118,
+        "narHash": "sha256-sM1FugCoe16to3IFdbz4TQYUCaiBu48AEUoMe4kGEzw=",
         "owner": "Mitrichius",
         "repo": "hugo-theme-anubis",
-        "rev": "01c3a53f124cbf293cbb0e9d10d4b834a0b3db41",
+        "rev": "3676a7c18e1581f99498cac2d143d57f398a67b2",
         "type": "github"
       },
       "original": {
         "owner": "Mitrichius",
+        "ref": "1.1",
         "repo": "hugo-theme-anubis",
         "type": "github"
       }

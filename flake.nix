@@ -1,5 +1,5 @@
 {
-  inputs.hugo-theme-anubis.url = "github:Mitrichius/hugo-theme-anubis";
+  inputs.hugo-theme-anubis.url = "github:Mitrichius/hugo-theme-anubis/1.1";
   inputs.hugo-theme-anubis.flake = false;
 
   outputs = { self, nixpkgs, hugo-theme-anubis, ... }: let
