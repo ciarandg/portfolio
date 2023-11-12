@@ -12,8 +12,8 @@
         name = "hugo-theme-anubis";
         src = self.inputs.hugo-theme-anubis;
         buildPhase = ''
-          mkdir -p $out/share
-          cp -r ./* $out/share/
+          mkdir -p $out
+          cp -r ./* $out/
         '';
       };
       portfolio = pkgs.stdenv.mkDerivation {
