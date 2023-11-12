@@ -20,7 +20,10 @@
         name = "portfolio";
         src = ./.;
         buildPhase = ''
-          cp -r ${hugo-theme-anubis} ./themes/hugo-theme-anubis
+          THEME_DIR="themes/hugo-theme-anubis"
+          rm -rf $THEME_DIR
+          mkdir -p $THEME_DIR
+          cp -r ${hugo-theme-anubis}/* $THEME_DIR/
           ${pkgs.hugo}/bin/hugo
           mv public $out
         '';
