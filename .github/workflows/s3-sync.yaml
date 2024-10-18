@@ -30,10 +30,10 @@ jobs:
           echo "access_key = ${{ secrets.LINODE_ACCESS_KEY }}" >> ~/.s3cfg
           echo "secret_key = ${{ secrets.LINODE_SECRET_KEY }}" >> ~/.s3cfg
           echo "host_base = us-east-1.linodeobjects.com" >> ~/.s3cfg
-          echo "host_bucket = %(bucket)s.us-east-1.linodeobjects.com" >> ~/.s3cfg
+          echo "host_bucket = ciarandg-portfolio.us-southeast-1.linodeobjects.com" >> ~/.s3cfg
 
       - name: Upload to Linode Object Storage
         run: |
-          s3cmd sync public/ s3://${{ secrets.LINODE_BUCKET_NAME }} \
+          s3cmd sync public/ s3://ciarandg-portfolio \
             --acl-public \
             --delete-removed
