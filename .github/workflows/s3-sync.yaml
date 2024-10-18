@@ -1,0 +1,39 @@
+name: Deploy to Linode Object Sotrage
+
+on:
+  push:
+    branches:
+      - s3-sync # TODO switch to mainline
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Install s3cmd
+        run: sudo apt-get install s3cmd
+
+      - name: Configure s3cmd
+        run: |
+          echo "[default]" > ~/.s3cfg
+          echo "access_key = ${{ secrets.LINODE_ACCESS_KEY }}" >> ~/.s3cfg
+          echo "secret_key = ${{ secrets.LINODE_SECRET_KEY }}" >> ~/.s3cfg
+          echo "host_base = us-east-1.linodeobjects.com" >> ~/.s3cfg
+          echo "host_bucket = %(bucket)s.us-east-1.linodeobjects.com" >> ~/.s3cfg
+
+      - name: Upload to Linode Object Storage
+        run: |
+          s3cmd sync public/ s3://${{ secrets.LINODE_BUCKET_NAME }} \
+            --acl-public \
+            --delete-removed
