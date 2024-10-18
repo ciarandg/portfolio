@@ -1,4 +1,4 @@
-name: Deploy to Linode Object Sotrage
+name: Deploy to Linode Object Storage
 
 on:
   push:
