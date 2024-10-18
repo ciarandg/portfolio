@@ -39,4 +39,5 @@ jobs:
         run: |
           s3cmd ws-create --ws-index=index.html --ws-error=404.html s3://ciarandg-portfolio
           s3cmd sync public/ s3://ciarandg-portfolio --no-mime-magic --guess-mime-type --acl-public --delete-removed --delete-after
+          s3cmd rm s3://ciarandg-portfolio/css/ --recursive
           s3cmd put public/css/ s3://ciarandg-portfolio/css/ --mime-type='text/css' --recursive --acl-public
