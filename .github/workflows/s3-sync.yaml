@@ -31,9 +31,11 @@ jobs:
           echo "secret_key = ${{ secrets.LINODE_SECRET_KEY }}" >> ~/.s3cfg
           echo "host_base = us-southeast-1.linodeobjects.com" >> ~/.s3cfg
           echo "host_bucket = ciarandg-portfolio.us-southeast-1.linodeobjects.com" >> ~/.s3cfg
+          echo "website_endpoint = http://ciarandg-portfolio.website-us-southeast-1.linodeobjects.com" >> ~/.s3cfg
 
       - name: Upload to Linode Object Storage
         run: |
+          s3cmd ws-create --ws-index=index.html --ws-error=404.html s3://ciarandg-portfolio
           s3cmd sync public/ s3://ciarandg-portfolio \
             --acl-public \
             --delete-removed
