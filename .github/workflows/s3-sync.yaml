@@ -33,7 +33,7 @@ jobs:
           echo "secret_key = ${{ secrets.LINODE_SECRET_KEY }}" >> ~/.s3cfg
           echo "host_base = us-southeast-1.linodeobjects.com" >> ~/.s3cfg
           echo "host_bucket = ciarandg-portfolio.us-southeast-1.linodeobjects.com" >> ~/.s3cfg
-          echo "website_endpoint = https://ciarandg-portfolio.website-us-southeast-1.linodeobjects.com" >> ~/.s3cfg
+          echo "website_endpoint = https://test.ciarandg.com" >> ~/.s3cfg
 
       - name: Configure website
         run: |

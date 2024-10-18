@@ -1,4 +1,4 @@
-# baseURL = "https://ciarandg-portfolio.website-us-southeast-1.linodeobjects.com"
+baseURL = "https://test.ciarandg.com"
 languageCode = "en-us"
 title = "Ciaran De Groot"
 theme = "hugo-theme-anubis"
