@@ -39,5 +39,9 @@ jobs:
         run: |
           s3cmd ws-create --ws-index=index.html --ws-error=404.html s3://ciarandg-portfolio
           s3cmd sync public/ s3://ciarandg-portfolio --no-mime-magic --guess-mime-type --acl-public --delete-removed --delete-after
+
+      # NOTE: s3cmd does not play nice with CSS MIME types. As a result we have to manually push the CSS directory with a hardcoded MIME type
+      - name: Upload CSS to Linode Object Storage
+        run: |
           s3cmd rm s3://ciarandg-portfolio/css/ --recursive
           s3cmd put public/css/ s3://ciarandg-portfolio/css/ --mime-type='text/css' --recursive --acl-public
