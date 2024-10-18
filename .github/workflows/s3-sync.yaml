@@ -35,9 +35,12 @@ jobs:
           echo "host_bucket = ciarandg-portfolio.us-southeast-1.linodeobjects.com" >> ~/.s3cfg
           echo "website_endpoint = https://ciarandg-portfolio.website-us-southeast-1.linodeobjects.com" >> ~/.s3cfg
 
-      - name: Upload to Linode Object Storage
+      - name: Configure website
         run: |
           s3cmd ws-create --ws-index=index.html --ws-error=404.html s3://ciarandg-portfolio
+
+      - name: Sync website to Linode Object Storage
+        run: |
           s3cmd sync public/ s3://ciarandg-portfolio --no-mime-magic --guess-mime-type --acl-public --delete-removed --delete-after
 
       # NOTE: s3cmd does not play nice with CSS MIME types. As a result we have to manually push the CSS directory with a hardcoded MIME type
