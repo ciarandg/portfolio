@@ -9,32 +9,31 @@ Take a look at the [gallery](/gallery) for a sample of my recent work. Alternati
 
 ## About
 <!-- ![headshot](headshot.jpg) -->
-I'm an automation developer and musician currently based in Edmonton,
-Alberta. I have a broad background working with audio, from DSP in JUCE
-and Max/MSP to livestreaming, interactive music-making, and sound design.
-In my free time, I'm an avid Linux tinkerer, French horn player, and
-long-distance swimmer.
+I'm a DevOps engineer based in Edmonton, Alberta, with a passion for functional programming, declarative infrastructure management, and tools like NixOS and Kubernetes.
 
-Since graduating from the University of British Columbia (BMUS
-2017-2021, minor in Applied Music Technology), I have worked to hone my
-abilities as a developer, in both professional and personal capacities.
-In particular, I have a strong interest in NixOS, functional programming,
-and declarative infrastructure management.
+My background extends beyond DevOps into the world of audio and music technology, where I’ve worked with digital signal processing in JUCE and Max/MSP, explored livestreaming setups, and delved into interactive music-making and sound design.
 
-## Skills
-### Preferred Languages
-- Java/Kotlin
+When I’m not writing Terraform or breaking production, you’ll find me expanding my homelab, playing music, or swimming freestyle.
+
+### Languages
+- Kotlin
 - Python
+- Go
+- TypeScript
 - Nix
-- HTML/CSS/JavaScript
-### Frameworks, Software Suites
+- SQL
+
+### Tooling (DevOps)
+- AWS
+- Terraform
+- Kubernetes
+- Prometheus
+- Databricks
+- Docker/Podman
+
+### Tooling (Music)
 - JUCE
 - OpenAL
 - Ableton Live
 - Max/MSP
 - Bitwig Studio
-- React
-- Next.js
-- Docker
-- Kubernetes
-- Prometheus
