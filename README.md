@@ -2,7 +2,7 @@
 
 https://ciarandg.com
 
-- Note that the `themes/hugo-theme-anubis` directory is a submodule
+- `themes/hugo-theme-anubis` is no longer a submodule, as the theme's repo has been [archived](https://github.com/Mitrichius/hugo-theme-anubis).
 
 ## Deployment
 ### Helm
