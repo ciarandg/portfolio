@@ -9,7 +9,7 @@ downloads: [
 ]
 ---
 
-![Naima voting interface](/naima_voting.png)
+![Naima voting interface]({{< assetUrl src="naima_voting.png" >}})
 
 Naima is a Discord bot that I use to manage a jazz listening club with
 friends. It is implemented in Kotlin using the

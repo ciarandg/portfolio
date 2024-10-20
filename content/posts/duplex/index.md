@@ -4,7 +4,7 @@ date: 2020-03-06
 draft: false
 tags: ["max", "instrument", "interactive"]
 gallery: true
-downloads: [ "[Download Duplex](/duplex.zip)" ]
+downloads: [ '[Download Duplex]({{< assetUrl src="duplex.zip" >}})' ]
 ---
 
 This patch is a polyphonic four-operator FM/additive synth. The synth is
@@ -20,4 +20,4 @@ but also has a built-in GUI keyboard to play with.
 - Pulse width control for square waveform
 - Optional velocity gain control (in FM, this can be used to control timbre)
 
-![](/duplex.png)
+![]({{< assetUrl src="duplex.png" >}})

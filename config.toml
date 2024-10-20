@@ -1,4 +1,3 @@
-# baseURL = "https://test.ciarandg.com/"
 languageCode = "en-us"
 title = "Ciaran De Groot"
 theme = "hugo-theme-anubis"
@@ -35,3 +34,6 @@ posts = "/archive/:filename"
 
 [taxonomies]
 tag = "tags"
+
+[params]
+assets_bucket_url = "https://ciarandg-portfolio.us-southeast-1.linodeobjects.com"
