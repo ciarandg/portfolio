@@ -35,3 +35,6 @@ posts = "/archive/:filename"
 
 [taxonomies]
 tag = "tags"
+
+[params]
+assets_bucket_url = "https://example.com"
