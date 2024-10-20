@@ -36,4 +36,4 @@ posts = "/archive/:filename"
 tag = "tags"
 
 [params]
-assets_bucket_url = "https://example.com"
+assets_bucket_url = "https://ciarandg-portfolio.us-southeast-1.linodeobjects.com"
