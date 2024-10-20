@@ -2,7 +2,7 @@
 
 https://ciarandg.com
 
-- `themes/hugo-theme-anubis` is no longer a submodule, as the theme's repo has been [archived](https://github.com/Mitrichius/hugo-theme-anubis).
+Note that `themes/hugo-theme-anubis` is a submodule for my fork of the [archived](https://github.com/Mitrichius/hugo-theme-anubis) original theme. This repo should be cloned using `--recursive`.
 
 ## Deployment
 ### Helm
