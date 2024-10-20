@@ -17,4 +17,4 @@ of the past, and the obsessive, slightly spiteful way that he uses it to debase
 and blame his love interest.
 
 \
-{{< audio src="/in_retrospect.wav" type="wav" >}}
+{{< audio src="in_retrospect.wav" type="wav" >}}

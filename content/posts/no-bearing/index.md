@@ -18,4 +18,4 @@ generator) and frequent modulations that cross over and under the 20Hz threshold
 (through the use of LFOs and ring modulation).
 
 \
-{{< audio src="/no_bearing.wav" type="wav" >}}
+{{< audio src="no_bearing.wav" type="wav" >}}

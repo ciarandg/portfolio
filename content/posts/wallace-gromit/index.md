@@ -14,4 +14,4 @@ turned out to be the most labor-intensive part of the project, as I hoped to
 effectively convey the scene's spatial depth in stereo.
 
 \
-{{< video src="/wallace_gromit.mp4" type="video/mp4" >}}
+{{< video src="wallace_gromit.mp4" type="video/mp4" >}}

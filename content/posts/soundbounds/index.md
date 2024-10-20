@@ -11,7 +11,7 @@ downloads: [
 ]
 ---
 
-![SoundBounds Logo](/soundbounds_banner.png)
+![SoundBounds Logo]({{< assetUrl src="soundbounds_banner.png" >}})
 
 SoundBounds is a first-of-its-kind soundtracking mod for Minecraft,
 allowing players to define sophisticated region-based soundtracks for
