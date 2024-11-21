@@ -4,7 +4,7 @@
     </div>
 
     <h1>{{ .Title }}</h1>
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $pages := where site.RegularPages "Params.blog" "!=" true}}
     {{ range $pages }}
         <div class="post-short-list">
             <header> 
