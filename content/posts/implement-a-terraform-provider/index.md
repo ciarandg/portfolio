@@ -2,7 +2,7 @@
 title: "Implement a Terraform Provider"
 date: 2024-11-10T00:00:00-06:00
 draft: false
-tags: ["rust", "epic"]
+tags: ["golang", "terraform"]
 downloads: []
 blog: true
 ---
