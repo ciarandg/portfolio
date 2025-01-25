@@ -35,11 +35,11 @@
     };
 
     apps.${system} = {
-      # `nix run .#dev` runs a development server with hot reload
+      # `nix run .#dev` runs a development server with hot reload and drafts enabled
       dev = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "dev" ''
-          ${lib.getExe pkgs.hugo} serve
+          ${lib.getExe pkgs.hugo} serve -D
         '');
       };
       develop = self.apps.${system}.dev;
