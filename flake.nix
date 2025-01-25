@@ -10,14 +10,13 @@
     nixpkgs,
   }: let
     system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+    };
+    lib = nixpkgs.lib;
   in {
     packages.${system} = {
-      portfolio = let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in
-        pkgs.stdenv.mkDerivation {
+      portfolio = pkgs.stdenv.mkDerivation {
           pname = "ciarandg-portfolio";
           version = "1.0";
 
@@ -33,6 +32,14 @@
         };
 
       default = self.packages.${system}.portfolio;
+    };
+    apps.${system} = {
+      dev = {
+        type = "app";
+        program = lib.getExe (pkgs.writeShellScriptBin "dev" ''
+          ${lib.getExe pkgs.hugo} serve
+        '');
+      };
     };
   };
 }
