@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=22.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
   };
 
   outputs = {
