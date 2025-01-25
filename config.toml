@@ -37,3 +37,7 @@ tag = "tags"
 
 [params]
 assets_bucket_url = "https://ciarandg-portfolio.us-southeast-1.linodeobjects.com"
+
+[module]
+  [[module.imports]]
+    path = "github.com/KKKZOZ/hugo-admonitions"
