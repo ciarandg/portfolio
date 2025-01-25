@@ -17,22 +17,23 @@
   in {
     packages.${system} = {
       portfolio = pkgs.stdenv.mkDerivation {
-          pname = "ciarandg-portfolio";
-          version = "1.0";
+        pname = "ciarandg-portfolio";
+        version = "1.0";
 
-          src = ./.;
+        src = ./.;
 
-          nativeBuildInputs = [pkgs.hugo];
+        nativeBuildInputs = [pkgs.hugo];
 
-          buildPhase = "hugo";
-          installPhase = ''
-            mkdir -p $out
-            cp -r ./public/* $out/
-          '';
-        };
+        buildPhase = "hugo";
+        installPhase = ''
+          mkdir -p $out
+          cp -r ./public/* $out/
+        '';
+      };
 
       default = self.packages.${system}.portfolio;
     };
+
     apps.${system} = {
       dev = {
         type = "app";
