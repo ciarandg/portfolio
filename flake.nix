@@ -16,7 +16,7 @@
     lib = nixpkgs.lib;
   in {
     packages.${system} = {
-      # nix build .#public generates the contents of a static site
+      # `nix build .#public` generates the contents of a static site
       public = pkgs.stdenv.mkDerivation {
         pname = "ciarandg-portfolio";
         version = ""; # unversioned
@@ -33,7 +33,7 @@
     };
 
     apps.${system} = {
-      # nix run .#dev runs a development server with hot reload
+      # `nix run .#dev` runs a development server with hot reload
       dev = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "dev" ''
@@ -42,7 +42,7 @@
       };
       develop = self.apps.${system}.dev;
 
-      # nix run .#pull-assets downloads all static content from object storage to ./static/
+      # `nix run .#pull-assets` downloads all static content from object storage to ./static/
       pull-assets = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "pull-assets" ''
@@ -50,7 +50,7 @@
         '');
       };
 
-      # nix run .#push-assets uploads all static content from ./static/ to object storage
+      # `nix run .#push-assets` uploads all static content from ./static/ to object storage
       push-assets = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "push-assets" ''
