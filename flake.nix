@@ -41,6 +41,22 @@
         '');
       };
       develop = self.apps.${system}.dev;
+
+      # nix run .#pull-assets downloads all static content from object storage to ./static/
+      pull-assets = {
+        type = "app";
+        program = lib.getExe (pkgs.writeShellScriptBin "pull-assets" ''
+          ${lib.getExe pkgs.s3cmd} sync s3://ciarandg-portfolio/ ./static/
+        '');
+      };
+
+      # nix run .#push-assets uploads all static content from ./static/ to object storage
+      push-assets = {
+        type = "app";
+        program = lib.getExe (pkgs.writeShellScriptBin "push-assets" ''
+            ${lib.getExe pkgs.s3cmd} sync --acl-public ./static/ s3://ciarandg-portfolio/
+        '');
+      };
     };
   };
 }
