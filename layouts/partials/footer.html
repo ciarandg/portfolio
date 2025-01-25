@@ -1,5 +1,25 @@
-<footer>
-  <span><a href="mailto:ciaran.deg@gmail.com">email</a></span>
-  <span><a href="http://www.github.com/ciarandg" target="_blank">github</a></span>
-  <span><a href="https://www.linkedin.com/in/ciaran-de-groot-78b6571bb/" target="_blank">linkedin</a></span>
+<footer class="common-footer">
+    {{ $languagesCount := $.Site.Home.AllTranslations }}
+    {{ if gt $languagesCount 1 }}
+        {{ partial "language-switcher.html" . }}
+    {{ end }}
+
+    <div class="common-footer-bottom">
+        {{ if .Site.Menus.footer }}
+            {{ $currentPage := . }}
+            <ul class="footer-menu">
+            {{ range .Site.Menus.footer }}
+            <li><a class="{{if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+            {{ end }}
+            </ul>
+        {{ end }}
+        <div class="copyright">
+            <p>© {{ if isset .Site.Params "author"}}{{ .Site.Params.author }}, {{end}}{{ now.Year }}<br>
+            {{ i18n "powered" }} <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>, {{ i18n "theme" }} <a target="_blank" rel="noopener noreferrer" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.<br>
+            {{ partial "footer-extra.html" . }}
+            </p>  
+        </div> 
+    </div>
+
+    {{ partial "h-card.html" . }}
 </footer>

@@ -1,21 +1,14 @@
 {{ define "main" }}
-
     <div class="homepage-content">
-    <article class="post-list">
-        <header>
-	    <h1>{{ .Params.fullname }}</h1>
-        </header>
-        <div class="content">
-            {{ .Content }}
-        </div>
-        {{ partial "articleInfoFull.html" . }}
-    </article>
-    <div class="homepage-addendum">
-        {{ .Params.addendum | markdownify }}
+        {{ .Content }}
     </div>
-    {{ if .Site.DisqusShortname }}
-        {{ template "_internal/disqus.html" . }}
-    {{ end }}
+
+    <div class="articles h-feed">
+        {{ $pages := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.hidden" "!=" true }}
+        {{ range (.Paginate $pages).Pages }}
+            {{ partial "post-summary.html" . }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
     </div>
 
 {{ end }}
