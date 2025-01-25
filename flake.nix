@@ -16,7 +16,8 @@
     lib = nixpkgs.lib;
   in {
     packages.${system} = {
-      portfolio = pkgs.stdenv.mkDerivation {
+      # nix build .#public generates the contents of a static site
+      public = pkgs.stdenv.mkDerivation {
         pname = "ciarandg-portfolio";
         version = ""; # unversioned
         src = ./.;
@@ -28,16 +29,18 @@
         '';
       };
 
-      default = self.packages.${system}.portfolio;
+      default = self.packages.${system}.public;
     };
 
     apps.${system} = {
+      # nix run .#dev runs a development server with hot reload
       dev = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "dev" ''
           ${lib.getExe pkgs.hugo} serve
         '');
       };
+      develop = self.apps.${system}.dev;
     };
   };
 }
