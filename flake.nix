@@ -18,12 +18,9 @@
     packages.${system} = {
       portfolio = pkgs.stdenv.mkDerivation {
         pname = "ciarandg-portfolio";
-        version = "1.0";
-
+        version = ""; # unversioned
         src = ./.;
-
         nativeBuildInputs = [pkgs.hugo];
-
         buildPhase = "hugo";
         installPhase = ''
           mkdir -p $out
