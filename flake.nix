@@ -25,6 +25,12 @@
         '';
       };
 
+      # `nix run .#hugo` lets you access the same version of hugo used in this flake
+      hugo = pkgs.hugo;
+
+      # `nix run .#s3cmd` lets you access the same version of s3cmd used in this flake
+      s3cmd = pkgs.s3cmd;
+
       default = self.packages.${system}.public;
     };
 
