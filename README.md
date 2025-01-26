@@ -2,7 +2,9 @@
 
 https://ciarandg.com
 
-Note that `themes/hugo-theme-anubis` is a subtree containing my fork of the [archived](https://github.com/Mitrichius/hugo-theme-anubis) original theme.
+Note that this repo contains git subtrees under the `themes/` directory:
+  - `hugo-admonitions` adds Markdown calllout support
+  - `hugo-theme-anubis` is my fork of the [archived](https://github.com/Mitrichius/hugo-theme-anubis) original theme
 
 ## Usage
 

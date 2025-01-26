@@ -1,6 +1,9 @@
 languageCode = "en-us"
 title = "Ciaran De Groot"
-theme = "hugo-theme-anubis"
+theme = [
+  "hugo-admonitions", # just adds support for Markdown callouts
+  "hugo-theme-anubis", # the actual theme
+]
 
 [menu]
 
@@ -37,7 +40,3 @@ tag = "tags"
 
 [params]
 assets_bucket_url = "https://ciarandg-portfolio.us-southeast-1.linodeobjects.com"
-
-[module]
-  [[module.imports]]
-    path = "github.com/KKKZOZ/hugo-admonitions"
