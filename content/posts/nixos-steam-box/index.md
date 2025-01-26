@@ -5,6 +5,7 @@ draft: true
 tags: ["nix", "nixos", "jovian-nixos", "steam", "gaming"]
 downloads: []
 blog: true
+tableOfContents: true
 ---
 
 ## Preface
