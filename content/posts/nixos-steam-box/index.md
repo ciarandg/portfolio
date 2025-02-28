@@ -33,7 +33,7 @@ Here's are some criteria that I consider necessary for a viable Steam Box:
 - No need to think about the concept of a window
 - An easy escape hatch out to access your Linux system in a regular DE
 - No need to touch a keyboard or a mouse if you just want to play a game
-  - Frustratingly, I haven't quite gotten here yet, as I still need to sign into my Steam Box with a keyboard at startup. If you're comfortable with automatic login, Jovian's `autoStart` feature achieves this.
+  - Frustratingly, I haven't quite gotten here yet, as I still need to sign into my Steam Box with a keyboard at startup. If you're comfortable with automatic login, Jovian's `autoStart` feature achieves this (or purports to, anyway—I have not had luck getting it working myself).
 
 ## Enter: Jovian-NixOS
 
@@ -99,9 +99,15 @@ Here's a broad overview of the configuration options in Jovian:
 - `jovian.hardware`
   - `jovian.hardware.has.amd.gpu`
     - If you have an AMD GPU, you need to set this to `true`.
-  - `jovian.hardware.amd.gpu.enableEarlyModesetting` **TODO** figure out use case
-  - `jovian.hardware.amd.gpu.enableBacklightControl` **TODO** figure out use case
-    - Adds a udev rule to loosen permissions on backlight access.
+  - `jovian.hardware.amd.gpu.enableEarlyModesetting`
+    - Enables early kernel modesetting for your GPU. For me, enabling this just
+      gave me an inescapable blackscreen, and I don't care enough about KMS to
+      want to fix it.
+  - `jovian.hardware.amd.gpu.enableBacklightControl`
+    - Adds a udev rule to loosen permissions on backlight access. As far as I can
+      tell, this would be used for automatically dimming your display on
+      inactivity. I don't think this is particularly relevant for a setup with a
+      TV.
 - `jovian.steamos`
   - Contains settings for things like Bluetooth and automount that mirror stock
     Steam Deck configs. Personally, my view is that you may as well configure
@@ -113,6 +119,42 @@ Here's a broad overview of the configuration options in Jovian:
 
 For more info, see the various `README` files inside Jovian's [modules directory](https://github.com/Jovian-Experiments/Jovian-NixOS/tree/development/modules).
 
+## My Config
+
+I generally run Hyprland on my machines, but for the sake of a media PC, I think Plasma is a very comfortable environment. You should be able to pretty much mix and match whatever Display Manager and Desktop Environment you want with this config, though.
+
+Note: My graphics card is a Radeon RX 6600. Your mileage may vary with other cards.
+```nix
+{
+  # These are all the unfree dependencies required by `jovian.steam.enable`
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "steamdeck-hw-theme"
+      "steam-jupiter-unwrapped"
+      "steam"
+    ];
+
+  jovian = {
+    steam.enable = true;
+    hardware.has.amd.gpu = true;
+  };
+
+  services.xserver.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    settings = {
+      General = {
+        # Scale SDDM UI by 2x for TV
+        GreeterEnvironment = "QT_SCREEN_SCALE_FACTORS=2";
+      };
+    };
+  };
+  services.desktopManager.plasma6.enable = true;
+}
+```
+
 ## Troubleshooting
 
 - Command to run gamescope from a regular Wayland session: `start-gamescope-session`
+  - This way you can easily see the console logs from gamescope!
