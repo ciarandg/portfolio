@@ -2,7 +2,7 @@
 title: "SoundBounds"
 date: 2021-07-24
 draft: false
-tags: ["mod", "openal", "kotlin", "java", "interactive"]
+tags: ["mod", "openal", "kotlin", "java", "interactive", "gaming"]
 gallery: true
 downloads: [
     '[Source Code](https://github.com/ciarandg/SoundBounds)',

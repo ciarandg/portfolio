@@ -15,14 +15,14 @@ theme = "hugo-theme-anubis"
     weight = -130
 
     [[menu.main]]
-    name = "archive"
-    url = "/archive/"
+    name = "blog"
+    url = "/blog/"
     weight = -120
 
-    #[[menu.main]]
-    #name = "blog"
-    #url = "/blog/"
-    #weight = -110
+    [[menu.main]]
+    name = "archive"
+    url = "/archive/"
+    weight = -110
 
     #[[menu.main]]
     #name = "contact"

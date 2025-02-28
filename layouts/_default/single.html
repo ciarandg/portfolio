@@ -4,6 +4,9 @@
         <header>
             <h1>{{ .Title }}</h1>
         </header>
+	{{ if .Params.tableOfContents }}
+	    {{ .TableOfContents }}
+	{{ end }}
         <div class="content">
             {{ .Content }}
         </div>
