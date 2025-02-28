@@ -3,7 +3,7 @@ fullname: "Ciaran De Groot"
 title: "About"
 draft: false
 addendum: '
-Take a look at the [gallery](/gallery) for a sample of my recent work. Alternatively, check out the [archive](/archive) for a comprehensive list of projects.
+Take a look at the [gallery](/gallery) for a sample of my work, or the [blog](/blog) for my thoughts and writing. Alternatively, check out the [archive](/archive) for a comprehensive list of projects.
 '
 ---
 
