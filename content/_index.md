@@ -13,7 +13,7 @@ I'm a DevOps engineer based in Edmonton, Alberta, with a passion for functional 
 
 My background extends beyond DevOps into the world of audio and music technology, where I’ve worked with digital signal processing in JUCE and Max/MSP, explored livestreaming setups, and delved into interactive music-making and sound design.
 
-When I’m not writing Terraform or breaking production, you’ll find me expanding my homelab, playing music, or swimming freestyle.
+I also like cooking, bartending, and swimming :)
 
 ### Languages
 - Kotlin
