@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code, Humans as Second-Class"
-date: 2025-02-28T00:00:00-06:00
+date: 2025-03-01T00:00:00-06:00
 draft: true
 tags: ["devops", "terraform"]
 downloads: []
