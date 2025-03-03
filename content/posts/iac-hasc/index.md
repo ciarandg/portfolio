@@ -7,7 +7,7 @@ downloads: []
 blog: true
 ---
 
-I spend quite a lot of my waking hours working with Terraform. It's a love-hate relationship. I think people already have a sense for what's great about Terraform, and most of the alternatives I see cropping up (looking at you, Pulumi) seem like solutions in search of a problem. To my mind, Terraform's greatest weaknesses come from a disregard for user experience. Obviously, this list is non-exhaustive.
+I spend quite a lot of my waking hours working with Terraform. It's a love-hate relationship. I think people already have a sense for what's great about Terraform, and most of the alternatives I see cropping up (looking at you, Pulumi) seem like solutions in search of a problem. I'm open to having my mind changed on that. However, to my mind, Terraform's greatest weaknesses come from a disregard for user experience. Obviously, this list is non-exhaustive.
 
 - In any non-trivial Terraform setup, you are developing from one directory (your shared code) and executing from another (your environment-specific module). This split introduces a small but constant element of friction.
 - The dependency tree is brittle because everything is so explicit: too often, you change something in one place and have to fix the same thing further up the module chain.
