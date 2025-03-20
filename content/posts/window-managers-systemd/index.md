@@ -50,8 +50,8 @@ And there, with a single service file, you get:
    up their CLI flags in your dotfiles
 
 Please note: I don't claim to be an expert in configuring systemd. The
-service config above is adapted from the built-in waybar config in
-home-manager. There may be room for improvement here.
+service config above is adapted from the built-in [waybar config](https://github.com/nix-community/home-manager/blob/f6af7280a3390e65c2ad8fd059cdc303426cbd59/modules/programs/waybar.nix#L306-L323)
+in home-manager. There may be room for improvement here.
 
 As you can see from the comment at the top of the snippet, this is a
 user service, not a system service. Don't forget to use `--user`, e.g.
