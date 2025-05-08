@@ -1,6 +1,6 @@
 ---
 title: "Bioinformatics for Biological Morons"
-date: 2025-05-03T00:00:00-06:00
+date: 2025-05-07T00:00:00-06:00
 draft: false
 tags: ["bioinformatics", "r"]
 downloads: []
