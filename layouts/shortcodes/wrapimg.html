@@ -2,4 +2,5 @@
   src="{{ .Site.Params.assets_bucket_url }}/{{ .Get "src" }}"
   alt="{{ .Get "alt" }}"
   class="wrap-{{ .Get "align" | default "right" }}"
+  style="max-width: {{ .Get "max-width" | default "none" }}; max-height: {{ .Get "max-height" | default "none" }};"
 />
