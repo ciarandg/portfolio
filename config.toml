@@ -19,11 +19,6 @@ theme = "hugo-theme-anubis"
     url = "/blog/"
     weight = -120
 
-    [[menu.main]]
-    name = "archive"
-    url = "/archive/"
-    weight = -110
-
     #[[menu.main]]
     #name = "contact"
     #url = "/contact/"
