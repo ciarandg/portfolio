@@ -9,7 +9,7 @@ function showFlamingTitle() {
   title.style.display = "block";
 }
 
-if (Math.random() < 0.5) {
+if (Math.random() < 0.1) {
   hideTextTitle();
   showFlamingTitle();
 }
