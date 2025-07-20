@@ -4,6 +4,7 @@ function hideTextTitle() {
 }
 
 function showFlamingTitle() {
+  // Shoutout to cooltext.com
   const title = document.getElementById("flaming-title");
   title.style.display = "block";
 }
