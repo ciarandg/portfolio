@@ -4,4 +4,5 @@
   <span><a href="https://www.linkedin.com/in/ciaran-de-groot-78b6571bb/" target="_blank">linkedin</a></span>
 </footer>
 
-<script defer language="javascript" type="text/javascript"  src="{{ "/js/custom.js" | urlize | relURL }}"></script>
+{{ $script := resources.Get "js/custom.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}"></script>
