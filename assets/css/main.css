@@ -475,9 +475,11 @@ div .homepage-content img {
   max-width: 50%;
 }
 
-.flaming-text {
-    display: none;
+#flaming-title {
+    display: none; /* Switched to `block` by JS */
     margin-right: auto;
     margin-left: 0px;
-    max-width: 40%;
+    height: 32pt;
+    object-fit: cover;
+    max-width: none;
 }
