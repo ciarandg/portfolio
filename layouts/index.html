@@ -3,7 +3,8 @@
     <div class="homepage-content">
     <article class="post-list">
         <header>
-	    <h1>{{ .Params.fullname }}</h1>
+          <h1 id="text-title">{{ .Params.fullname }}</h1>
+          <img id="flaming-title" src="{{ .Site.Params.assets_bucket_url }}/name-flaming.gif" />
         </header>
         <div class="content">
             {{ .Content }}
@@ -17,5 +18,8 @@
         {{ template "_internal/disqus.html" . }}
     {{ end }}
     </div>
+
+{{ $script := resources.Get "js/index.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}"></script>
 
 {{ end }}

@@ -474,3 +474,12 @@ div .homepage-content img {
   margin: 0 0 1em 1em;
   max-width: 50%;
 }
+
+#flaming-title {
+    display: none; /* Switched to `block` by JS */
+    margin-right: auto;
+    margin-left: 0px;
+    height: 32pt;
+    object-fit: cover;
+    max-width: none;
+}
