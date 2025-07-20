@@ -19,4 +19,7 @@
     {{ end }}
     </div>
 
+{{ $script := resources.Get "js/index.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}"></script>
+
 {{ end }}
