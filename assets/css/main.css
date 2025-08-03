@@ -463,16 +463,26 @@ div .homepage-content img {
     margin-right: 1em;
 }
 
+.image-wrap {
+  margin: 0 1em 1em 0;
+  display: inline-block;
+}
+
 .wrap-left {
   float: left;
   margin: 0 1em 1em 0;
-  max-width: 50%;
 }
 
 .wrap-right {
   float: right;
   margin: 0 0 1em 1em;
-  max-width: 50%;
+}
+
+.image-caption {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
 }
 
 #flaming-title {
