@@ -1,6 +1,9 @@
 languageCode = "en-us"
 title = "Ciaran De Groot"
-theme = "hugo-theme-anubis"
+theme = [
+  "hugo-admonitions", # just adds support for Markdown callouts
+  "hugo-theme-anubis", # the actual theme
+]
 
 [menu]
 
