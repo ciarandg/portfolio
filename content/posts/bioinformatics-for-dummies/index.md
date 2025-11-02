@@ -67,7 +67,7 @@ Bioconductor is an R package repository specifically tailored to bioinformatics.
 
 My initial impression is: just give up on Nix for bioinformatics work. I've been playing with this tooling on NixOS and it has been a serious headache; I ended up just spinning up an Ubuntu Distrobox and doing all my package management with Conda.
 
-There are interesting tools in the Nix ecosystem, such as [bionix](https://github.com/PapenfussLab/bionix) and [rix](https://github.com/ropensci/rix). If I was a researcher, I think that the reproducibility Nix offers would seem very compelling to me, but it seems that bioinformatics has a very mature tooling ecosystem that is pretty much totally parallel to most of the tooling I use in my day-to-day as a software engineer.
+There are interesting tools in the Nix ecosystem, such as [bionix](https://github.com/PapenfussLab/bionix) and [rix](https://github.com/ropensci/rix). If I was a researcher, I think that the reproducibility Nix offers would seem very compelling to me, but it seems that bioinformatics has a very mature tooling ecosystem that is pretty much totally orthogonal to most of the tooling I use in my day-to-day as a software engineer.
 
 ## Tools
 
