@@ -22,9 +22,9 @@ I have not yet settled on Talos as a long-term solution. However, I feel relativ
 
 ## My Current State
 
-Currently, I have a single-node Talos cluster running bare-metal on an [ODROID H4+](https://www.hardkernel.com/shop/odroid-h4-plus/). The cluster is running Flannel (which comes pre-installed), `ingress-nginx`, and MetalLB. I've got application ingress fully working on a static IP within my LAN, but have not yet attempted to expose services to the public or to a VPN. This is my first time using both Flannel and MetalLB. So far I haven't had to give Flannel any thought or configuration at all though that may change as I expand to a multi-node cluster. MetalLB has presented a bit more of a learning curve, as I'll explain below, but so far I've been impressed by it overall.
+Currently, I have a single-node Talos cluster running bare-metal on an [ODROID H4+](https://www.hardkernel.com/shop/odroid-h4-plus/). The cluster is running Flannel (which comes pre-installed), `ingress-nginx`, and MetalLB. I've got application ingress fully working on a static IP within my LAN, but have not yet attempted to expose services to the public or to a VPN. This is my first time using both Flannel and MetalLB. So far I haven't had to give Flannel any thought or configuration at all, though that may change as I expand to a multi-node cluster. MetalLB has presented a bit more of a learning curve, as I'll explain below, but it hasn't been _too_ painful to get up and running.
 
-The cluster itself is provisioned using the [Talos Terraform provider](https://registry.terraform.io/providers/siderolabs/talos/latest). For simplicity's sake, I'm currently managing on-cluster resources with the Helm and Kubernetes Terraform providers, though I will be assessing several other options including Yoke, Helmfile, and ArgoCD going forwards.
+The cluster is provisioned using the [Talos Terraform provider](https://registry.terraform.io/providers/siderolabs/talos/latest). For simplicity's sake, I'm currently managing on-cluster applications with the Helm and Kubernetes Terraform providers, though I will be assessing several other options including Yoke, Helmfile, and ArgoCD going forwards.
 
 ## Terraform Management
 
