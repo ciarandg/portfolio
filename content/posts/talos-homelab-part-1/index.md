@@ -8,8 +8,6 @@ blog: true
 tableOfContents: true
 ---
 
-<!-- {{< wrapimg src="tim-allen.jpg" alt="a beautiful portrait of Tim Allen" align="right" max-height="300px" >}} -->
-
 In my [previous post](/archive/homelab-ugly/), I described the issues I've been having with my current homelab. I'm still working on the replacement, so this post is going to describe the intermediary state my homelab is currently in, my initial impressions of [Talos Linux](https://www.talos.dev/), and some hurdles I've run into along the way.
 
 ## The Appeal of Talos
