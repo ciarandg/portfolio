@@ -14,7 +14,7 @@ In my [previous post](/archive/homelab-ugly/), I described the issues I've been 
 
 ## The Appeal of Talos
 
-I've been eyeing Talos Linux for a while as a potential platform for a homelab. Having experienced the tedium of building baremetal Kubernetes clusters on both NixOS and Ubuntu, I am drawn to the concept of a "Kubernetes-only" Linux distribution. Talos is exciting because it's so stripped down: the ISO clocks in at a mere 300 megabytes, and it completely omits SSH authentication in favor of an API-based approach to system management.
+I've been eyeing Talos Linux for a while as a potential platform for a homelab. Having experienced the tedium of building bare-metal Kubernetes clusters on both NixOS and Ubuntu, I am drawn to the concept of a "Kubernetes-only" Linux distribution. Talos is exciting because it's so stripped down: the ISO clocks in at a mere 300 megabytes, and it completely omits SSH authentication in favor of an API-based approach to system management.
 
 However, there are clear reasons to be wary about Talos. It is a product of corporate open-source with a relatively small community. Sidero are eager to upsell their other products and are not necessarily incentivized to provide a stable and open platform. Additionally, anything you want to do at the system level on a Talos machine has to be packaged as an [extension](https://github.com/siderolabs/extensions) and baked into your image. This includes both ZFS and Tailscale support, both of which are going to be crucial for me moving forwards.
 
