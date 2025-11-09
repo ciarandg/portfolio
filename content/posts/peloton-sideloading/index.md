@@ -12,7 +12,7 @@ tableOfContents: false
 
 I own a first-generation Peloton bike (long story), and have never felt willing to pay the $34.99 CAD monthly fee to access their content and workouts. For years, this has effectively turned the bike a very large paperweight. For the uninitiated, without a paid subscription you are limited to the "just ride" mode, which is the equivalent of cycling while staring at an odometer.
 
-However, today I learned that it is trivial to sideload whatever applications you'd like onto the bike. Additionally, there's [homebrew software](https://github.com/selalipop/grupetto) available to display an overlay with your stats overtop of whatever app you have open. Unfortunately this information is scattered across junky fitness websites and Reddit threads, so I'm consolidating the steps here.
+However, today I learned that it is trivial to sideload whatever applications you'd like onto the bike. Additionally, there's [homebrew software](https://github.com/doudar/grupetto) available to display an overlay with your stats overtop of whatever app you have open. Unfortunately this information is scattered across junky fitness websites and Reddit threads, so I'm consolidating the steps here.
 
 ## Installing a Custom Launcher
 
@@ -33,9 +33,9 @@ If you're familiar with Android development, you'll be pleased to learn that Pel
 
 1. As with any Android device, I'd suggest using a proper package manager if possible. The only two apps I installed through `adb` on my tablet were [Lawnchair](https://lawnchair.app/) and [Droid-ify](https://github.com/Droid-ify/client), my preferred FDroid client. From there, I used Droid-ify to install [Obtanium](https://github.com/ImranR98/Obtainium) for managing apps that aren't available in the FDroid repositories.
 2. The apps I have currently installed via FDroid: Obtanium, Jellyfin
-3. The apps I have currently installed via Obtanium: [Cromite](https://github.com/uazo/cromite), [grupetto](https://github.com/selalipop/grupetto)
+3. The apps I have currently installed via Obtanium: [Cromite](https://github.com/uazo/cromite), [grupetto](https://github.com/doudar/grupetto)
 4. When installing Cromite via Obtanium, pick `arm64_ChromePublic`.
 
 ## grupetto
 
-grupetto is a wonderful little Android app that provides an overlay with your current stats (power, cadence, resistance, speed) on top of whatever other app you are using. For me, this is a game-changer. Unfortunately there is no support for more complex features like session tracking, as it is [considered out-of-scope](https://github.com/selalipop/grupetto?tab=readme-ov-file#unimplemented-features) by the maintainer. If I find myself using this setup consistently, I'll likely either contribute some features upstream or fork the app and build it into a more complete workout suite. I miss writing Kotlin, so it'd be a good excuse :)
+grupetto is a wonderful little Android app that provides an overlay with your current stats (power, cadence, resistance, speed) on top of whatever other app you are using. For me, this is a game-changer. Unfortunately there is no support for more complex features like session tracking, as it is [considered out-of-scope](https://github.com/doudar/grupetto?tab=readme-ov-file#unimplemented-features) by the maintainer. If I find myself using this setup consistently, I'll likely either contribute some features upstream or fork the app and build it into a more complete workout suite. I miss writing Kotlin, so it'd be a good excuse :)
