@@ -28,7 +28,7 @@ programs.helix = {
 };
 ```
 
-Now if you press `Ctrl+P` followed by the `g` key, `go-grip` will open a tab in your browser so you can preview your Markdown file as you edit it!
+Now if you press `Ctrl+p` followed by the `g` key, `go-grip` will open a tab in your browser so you can preview your Markdown file as you edit it!
 
 Note that by preventing non-zero exit codes via `|| true`, you avoid seeing error messages inside of Helix. This is necessary for both the `pkill` command and the `go-grip` command because:
 
