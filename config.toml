@@ -24,6 +24,10 @@ theme = "hugo-theme-anubis"
     #url = "/contact/"
     #weight = -100
 
+[markup]
+  [markup.highlight]
+    style = "friendly"
+
 [permalinks]
 posts = "/archive/:filename"
 

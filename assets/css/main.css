@@ -1,8 +1,9 @@
 :root {
-    --accent: #017AA2;
-    --text-color: #333;
-    --rule-color: #333;
-    --gallery-rule-color: #888;
+    --background-color: #FAF0E6;
+    --text-color: #333333;
+    --accent-color: #017AA2;
+    --snippet-background-color: #EEE5DA;
+    --rule-color: #888888;
     --rule-width: 80%;
     --rule-thickness: 0.1em;
 }
@@ -20,7 +21,7 @@ html {
 
 body {
     margin: 0;
-    background: #faf0e6;
+    background: var(--background-color);
     color: var(--text-color);
     font-size: 18px;
     line-height: 1.5;
@@ -68,7 +69,7 @@ h3 {
 /* Links */
 
 a {
-    color: var(--accent);
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -79,14 +80,14 @@ a:hover {
 
 a:hover,
 a:focus {
-    color: var(--accent);
-    border-bottom: 1px solid var(--accent);
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
 }
 
 a:active {
-    color: var(--accent);
+    color: var(--accent-color);
     opacity: 0.9;
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent-color);
 }
 
 a.skip-main {
@@ -131,25 +132,82 @@ th, td {
     border: 1px double lightgrey;
 }
 
-/* Code */
-pre {
-    padding: 1em;
-    background-color: #f1f1f1;
-    max-width: 100%;
-    overflow: auto;
+/* Inline code snippets */
+p > code,
+li > code,
+td > code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.90em;
+    background: var(--snippet-background-color);
+    color: var(--accent-color);
+    border-radius: 4px;
+    padding: 0.1em 0.3em;
 }
 
-code,
-pre,
-kbd {
-    font-family: monospace;
-    font-size: 0.90em;
-    line-height: 154%;
-    color: var(--accent);
+/* Multiline code blocks */
+.highlight {
+    position: relative;
+    padding: 1.5em 1em 1em 1em;
+    background: var(--snippet-background-color);
+    border-radius: 8px;
+    margin: 1.5em 0;
+    overflow: hidden;
+}
+
+.highlight code[data-lang]::before {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0.6em;
+    left: 0.8em;
+    font-size: 0.75em;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 0;
+    background: none !important;
+    overflow-x: auto;
+    padding-bottom: 0.5em;
+    scrollbar-width: auto;
+    scrollbar-color: rgba(0,0,0,0.2) rgba(0,0,0,0.05);
+    scrollbar-gutter: stable;
+}
+
+.highlight code {
+    background: none;
+    padding: 0;
+}
+
+.highlight code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.highlight-copy-btn {
+    position: absolute;
+    top: 0.6em;
+    right: 0.6em;
+    background: transparent;
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.highlight-copy-btn:hover {
+    opacity: 1;
+}
+
+.highlight-copy-btn svg {
+    fill: var(--accent-color);
 }
 
 /* Styles */
-
 blockquote {
     border-left: 2px solid #cccccc;
     padding: 0.1em 1em;
@@ -255,7 +313,7 @@ article header h1 a {
 }
 
 .article-info a:hover {
-    color: var(--accent);
+    color: var(--accent-color);
 }
 
 .post-short-list .article-info {
@@ -347,7 +405,7 @@ article img {
 }
 
 .pagination-item a:hover, .pagination-item   a:focus {
-    color: var(--accent);
+    color: var(--accent-color);
     border-bottom: 0;
 }
 
@@ -420,7 +478,7 @@ footer span a {
 
 .gallery-post-list hr {
     margin-top: 2em;
-    border-top: var(--rule-thickness) solid var(--gallery-rule-color);
+    border-top: var(--rule-thickness) solid var(--rule-color);
 }
 
 .gallery-post-list .title a {
@@ -428,7 +486,7 @@ footer span a {
 }
 
 .gallery-post-list .title a:hover {
-    color: var(--accent);
+    color: var(--accent-color);
 }
 
 .gallery-post-list img {
