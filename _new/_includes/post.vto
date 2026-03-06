@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/fonts.css" />
+    <link rel="stylesheet" href="/static/highlight.css" />
+    <link rel="stylesheet" href="/static/base.css" />
+    <link rel="stylesheet" href="/static/post.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" id="nav-previous">← Previous</a>
+      <a href="/" id="nav-home">Home</a>
+      <a href="/" id="nav-next">→ Next</a>
+    </nav>
+    <hr />
+    <h1>{{ title }}</h1>
+    <span class="post-date">{{ date |> formatDate }}</span>
+    {{ content }}
+  </body>
+</html>
