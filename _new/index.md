@@ -17,7 +17,7 @@ I'm Ciaran. I write code, and sometimes I write here.
   {{ for post of search.pages("url^=/posts/ !draft=true !archived=true", "date=desc", 5) }}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <i>{{ post.date |> formatDate }}</i>
+      <span class="post-date">{{ post.date |> formatDate }}</span>
     </li>
   {{ /for }}
 </ul>
@@ -32,7 +32,7 @@ I'm Ciaran. I write code, and sometimes I write here.
   {{ for post of search.pages("url^=/posts/ !draft=true !archived=true", "date=desc") |> drop(5) |> shuffle |> take(5) }}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <i>{{ post.date |> formatDate }}</i>
+      <span class="post-date">{{ post.date |> formatDate }}</span>
     </li>
   {{ /for }}
 </ul>
