@@ -11,9 +11,24 @@
   </head>
   <body>
     <nav>
-      <a href="/" id="nav-previous">← Previous</a>
+      {{ set previousUrl = search.previousPage(url, postsQuery, "date=asc")?.url }}
+      {{ set nextUrl = search.nextPage(url, postsQuery, "date=asc")?.url }}
+
+      {{ if previousUrl }}
+      <a href="{{ previousUrl }}" id="nav-previous">← Previous</a>
+      {{ else }}
+      <!-- Empty #nav-previous needs a placeholder since <nav> is 3-column -->
+      <a id="nav-previous"></a>
+      {{ /if }}
+
       <a href="/" id="nav-home">Home</a>
-      <a href="/" id="nav-next">→ Next</a>
+
+      {{ if nextUrl }}
+      <a href="{{ nextUrl }}" id="nav-next">→ Next</a>
+      {{ else }}
+      <!-- Empty #nav-next needs a placeholder since <nav> is 3-column -->
+      <a id="nav-next"></a>
+      {{ /if }}
     </nav>
     <hr />
     <h1>{{ title }}</h1>
