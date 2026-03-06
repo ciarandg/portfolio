@@ -28,7 +28,7 @@ site.use(googleFonts({
 
 site.use(feed({
   output: ["/posts.rss", "/posts.json"],
-  query: "!draft=true !archived=true",
+  query: "url^=/posts/ !draft=true !archived=true",
   info: {
     title: "=site.title",
     description: "=site.description",
