@@ -2,6 +2,7 @@
 title: "Wallace & Gromit Foley"
 date: 2019-11-24
 draft: false
+archived: true
 tags: ["foley", "sound design"]
 ---
 
