@@ -16,7 +16,10 @@ I'm Ciaran. I write code, and sometimes I write here.
 <ul id="recent-posts" class="post-listing">
   {{ for post of search.pages(postsQuery, "date=desc", 8) }}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="post-title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="post-type">{{ post.type }}</span>
+      </span>
       <span class="post-date">{{ post.date |> formatDate }}</span>
     </li>
   {{ /for }}
@@ -31,7 +34,10 @@ I'm Ciaran. I write code, and sometimes I write here.
 <ul id="random-posts" class="post-listing">
   {{ for post of search.pages(postsQuery, "date=desc") |> drop(8) |> shuffle |> take(8) }}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="post-title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="post-type">{{ post.type }}</span>
+      </span>
       <span class="post-date">{{ post.date |> formatDate }}</span>
     </li>
   {{ /for }}
