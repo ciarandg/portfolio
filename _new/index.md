@@ -14,7 +14,7 @@ I'm Ciaran. I write code, and sometimes I write here.
 ## Recently
 
 <ul id="recent-posts" class="post-listing">
-  {{ for post of search.pages("url^=/posts/", "date=desc", 5) }}
+  {{ for post of search.pages("url^=/posts/ !draft=true !archived=true", "date=desc", 5) }}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
       <i>{{ post.date |> formatDate }}</i>
@@ -29,7 +29,7 @@ I'm Ciaran. I write code, and sometimes I write here.
 ## Randomly
 
 <ul id="random-posts" class="post-listing">
-  {{ for post of search.pages("url^=/posts/", "date=desc") |> drop(5) |> shuffle |> take(5) }}
+  {{ for post of search.pages("url^=/posts/ !draft=true !archived=true", "date=desc") |> drop(5) |> shuffle |> take(5) }}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
       <i>{{ post.date |> formatDate }}</i>
