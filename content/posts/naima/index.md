@@ -3,6 +3,7 @@ title: "Naima"
 date: 2022-08-09
 draft: false
 archived: false
+type: project
 
 tags: ["discord", "kotlin", "java", "mongodb"]
 gallery: true

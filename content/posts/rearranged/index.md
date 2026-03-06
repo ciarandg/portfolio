@@ -3,6 +3,7 @@ title: "Rearranged"
 date: 2019-12-10
 draft: false
 archived: false
+type: music
 
 tags: ["composition"]
 gallery: true

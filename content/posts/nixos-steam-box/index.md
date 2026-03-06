@@ -3,6 +3,7 @@ title: "Turn Your PC Into a Steam Box with Jovian-NixOS"
 date: 2025-02-27T00:00:00-06:00
 draft: false
 archived: false
+type: blog
 
 tags: ["nix", "nixos", "jovian-nixos", "steam", "gaming"]
 downloads: []

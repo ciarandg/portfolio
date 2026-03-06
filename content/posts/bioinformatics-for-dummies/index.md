@@ -3,10 +3,10 @@ title: "Bioinformatics for the Biologically Incapable"
 date: 2025-05-07T00:00:00-06:00
 draft: false
 archived: false
+type: blog
 
 tags: ["bioinformatics", "r"]
 downloads: []
-blog: true
 tableOfContents: true
 ---
 

@@ -3,6 +3,7 @@ title: "Terraform Lockfile Insights"
 date: 2024-02-18
 draft: false
 archived: false
+type: project
 
 tags: ["go", "golang", "terraform", "tree-sitter"]
 gallery: true

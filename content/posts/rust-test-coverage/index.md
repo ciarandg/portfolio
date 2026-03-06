@@ -3,6 +3,7 @@ title: "Rust, Test Coverage, and You"
 date: 2025-04-20T12:00:00-06:00
 draft: false
 archived: false
+type: blog
 
 tags: ["rust", "testing", "nix"]
 downloads: []

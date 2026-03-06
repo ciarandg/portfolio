@@ -3,6 +3,7 @@ title: "Tiling WMs and systemd: Two Great Tastes"
 date: 2025-03-19T00:00:00-06:00
 draft: false
 archived: false
+type: blog
 
 tags: ["linux", "systemd", "niri", "hyprland", "ricing", "nix", "nixos"]
 downloads: []

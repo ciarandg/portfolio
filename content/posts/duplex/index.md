@@ -3,6 +3,7 @@ title: "Duplex (Max/MSP)"
 date: 2020-03-06
 draft: false
 archived: false
+type: project
 
 tags: ["max", "instrument", "interactive"]
 gallery: true

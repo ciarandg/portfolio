@@ -3,6 +3,7 @@ title: "Contributing to Kubernetes: From Zero to Not-Zero"
 date: 2026-01-20T00:00:00-06:00
 draft: true
 archived: false
+type: blog
 
 tags: ["kubernetes", "foss"]
 downloads: []

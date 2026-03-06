@@ -3,6 +3,7 @@ title: "Rust for the Weekend Warrior"
 date: 2025-04-20T00:00:00-06:00
 draft: false
 archived: false
+type: blog
 
 tags: ["rust"]
 downloads: []

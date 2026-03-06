@@ -3,6 +3,7 @@ title: "Parnassus"
 date: 2020-11-23
 draft: false
 archived: false
+type: project
 
 tags: ["java", "swing"]
 gallery: false

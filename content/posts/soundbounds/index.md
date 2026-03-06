@@ -3,6 +3,7 @@ title: "SoundBounds"
 date: 2021-07-24
 draft: false
 archived: false
+type: project
 
 tags: ["mod", "openal", "kotlin", "java", "interactive", "gaming"]
 gallery: true

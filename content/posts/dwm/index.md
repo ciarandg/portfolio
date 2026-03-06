@@ -3,6 +3,7 @@ title: "dwm"
 date: 2020-05-11T15:34:38-06:00
 draft: false
 archived: true
+type: project
 
 tags: ["linux", "fork"]
 downloads: [ "[Source Code](https://gist.github.com/ciarandg/6d0c4e0c9218d3cba22e11c301959e60)" ]

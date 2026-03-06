@@ -3,6 +3,7 @@ title: "Infrastructure as Code, Humans as Second-Class"
 date: 2025-03-01T00:00:00-06:00
 draft: false
 archived: true
+type: blog
 
 tags: ["devops", "terraform"]
 downloads: []

@@ -3,6 +3,7 @@ title: "Sideloading on a Peloton"
 date: 2025-11-01T00:00:00-06:00
 draft: false
 archived: false
+type: blog
 
 tags: ["fitness", "android"]
 downloads: []
