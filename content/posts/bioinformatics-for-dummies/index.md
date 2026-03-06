@@ -20,7 +20,7 @@ FASTA is a plaintext format for storing nucleotide sequences. You can find a bri
 
 An example:
 
-```fasta
+```txt
 >seq1 my cool nucleotide sequence
 ATCGTACGATCGATCGATCG
 ```
@@ -30,7 +30,7 @@ ATCGTACGATCGATCGATCG
 FASTQ is also a plaintext format for storing nucleotide sequences. Unlike FASTA, it contains both raw sequence data and quality scores for each base (each A/T/C/G letter in a sequence is a "nucleotide base").
 
 An example:
-```fastq
+```txt
 @seq1
 ATCGTACGATCG
 +
