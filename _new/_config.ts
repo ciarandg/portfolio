@@ -4,6 +4,7 @@ import feed from "lume/plugins/feed.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 
 const site = lume();
+const postsQuery = "url^=/posts/ !draft=true !archived=true";
 
 site.add("/static/base.css");
 site.add("/static/homepage.css");
@@ -26,9 +27,11 @@ site.use(googleFonts({
   },
 }));
 
+site.data("postsQuery", postsQuery);
+
 site.use(feed({
   output: ["/posts.rss", "/posts.json"],
-  query: "url^=/posts/ !draft=true !archived=true",
+  query: postsQuery,
   info: {
     title: "=site.title",
     description: "=site.description",
