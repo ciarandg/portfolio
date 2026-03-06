@@ -2,6 +2,8 @@
 title: "Markdown Preview in Helix with go-grip"
 date: 2026-01-31T00:00:00-06:00
 draft: false
+archived: false
+
 tags: ["helix", "docs", "markdown"]
 downloads: []
 blog: true

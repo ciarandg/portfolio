@@ -4,6 +4,7 @@ title: "NixOS Configuration"
 date: 2021-04-28
 draft: false
 archived: true
+
 tags: ["linux", "nixos", "nix"]
 gallery: false
 downloads: [

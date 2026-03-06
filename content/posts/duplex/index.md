@@ -2,6 +2,8 @@
 title: "Duplex (Max/MSP)"
 date: 2020-03-06
 draft: false
+archived: false
+
 tags: ["max", "instrument", "interactive"]
 gallery: true
 downloads: [ '[Download Duplex]({{< assetUrl src="duplex.zip" >}})' ]

@@ -2,6 +2,8 @@
 title: "In Retrospect"
 date: 2019-12-05
 draft: false
+archived: false
+
 tags: ["composition"]
 ---
 

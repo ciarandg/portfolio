@@ -2,6 +2,8 @@
 title: "Parnassus"
 date: 2020-11-23
 draft: false
+archived: false
+
 tags: ["java", "swing"]
 gallery: false
 downloads: ['[Source Code](https://github.com/ciarandg/Parnassus)']

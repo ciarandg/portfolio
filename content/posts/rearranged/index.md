@@ -2,6 +2,8 @@
 title: "Rearranged"
 date: 2019-12-10
 draft: false
+archived: false
+
 tags: ["composition"]
 gallery: true
 downloads: [ '[Download Octophonic Mix]({{< assetUrl src="rearranged_octo.zip" >}})' ]

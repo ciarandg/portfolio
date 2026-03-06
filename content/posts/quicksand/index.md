@@ -2,6 +2,8 @@
 title: "QuickSand"
 date: 2021-04-21
 draft: false
+archived: false
+
 tags: ["vst", "juce", "c++", "effect", "interactive"]
 gallery: true
 downloads: [

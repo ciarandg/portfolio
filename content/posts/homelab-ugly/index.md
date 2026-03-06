@@ -2,6 +2,8 @@
 title: "My Homelab: The Ugly"
 date: 2025-07-18T00:00:00-06:00
 draft: false
+archived: false
+
 tags: ["nixos", "terraform"]
 downloads: []
 blog: true

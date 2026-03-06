@@ -2,6 +2,8 @@
 title: "No Bearing"
 date: 2019-10-19
 draft: false
+archived: false
+
 tags: ["composition", "concrete"]
 gallery: true
 ---

@@ -2,6 +2,8 @@
 title: "The Beginnings of a Talos Homelab"
 date: 2025-11-01T00:00:00-06:00
 draft: false
+archived: false
+
 tags: ["talos", "kubernetes", "homelab", "terraform", "devops", "homelab"]
 downloads: []
 blog: true

@@ -2,6 +2,8 @@
 title: "Terraform Lockfile Insights"
 date: 2024-02-18
 draft: false
+archived: false
+
 tags: ["go", "golang", "terraform", "tree-sitter"]
 gallery: true
 downloads: ['[Source Code](https://github.com/ciarandg/terraform-lockfile-insights)']
