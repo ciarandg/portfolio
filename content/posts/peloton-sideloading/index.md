@@ -4,6 +4,7 @@ date: 2025-11-01T00:00:00-06:00
 draft: false
 archived: false
 type: blog
+templateEngine: [vto, md]
 
 tags: ["fitness", "android"]
 downloads: []
@@ -11,7 +12,7 @@ blog: true
 tableOfContents: false
 ---
 
-{{< wrapimg src="yowamushi.jpg" alt="Yowamushi Pedal playing on a Pelaton bike" caption="Watch your weeaboo cycling content while you pedal!" align="right" >}}
+{{ comp.wrapimg({ src: "yowamushi.jpg", alt: "Yowamushi Pedal playing on a Pelaton bike", caption: "Watch your weeaboo cycling content while you pedal!", align: "right"}) }}
 
 I own a first-generation Peloton bike (long story), and have never felt willing to pay the $34.99 CAD monthly fee to access their content and workouts. For years, this has effectively turned the bike a very large paperweight. For the uninitiated, without a paid subscription you are limited to the "just ride" mode, which is the equivalent of cycling while staring at an odometer.
 

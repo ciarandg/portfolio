@@ -4,10 +4,11 @@ date: 2019-12-10
 draft: false
 archived: false
 type: music
+templateEngine: [vto, md]
 
 tags: ["composition"]
 gallery: true
-downloads: [ '[Download Octophonic Mix]({{< assetUrl src="rearranged_octo.zip" >}})' ]
+downloads: [ '[Download Octophonic Mix]({{ "rearranged_octo.zip" |> assetUrl }})' ]
 ---
 
 “Rearranged” is a short octophonic work made from instrumental samples and
@@ -16,5 +17,4 @@ into drones, which are then layered, modulated, and panned in 2D in order to
 create varied textures and gestures. Listen for harmonic content underneath
 layers of noise.
 
-\
-{{< audio src="rearranged_stereo.wav" type="wav" >}}
+{{ comp.audio({ src: "rearranged_stereo.wav", type: "wav" }) }}

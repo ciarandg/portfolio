@@ -4,6 +4,7 @@ date: 2021-07-24
 draft: false
 archived: false
 type: project
+templateEngine: [vto, md]
 
 tags: ["mod", "openal", "kotlin", "java", "interactive", "gaming"]
 gallery: true
@@ -14,7 +15,7 @@ downloads: [
 ]
 ---
 
-![SoundBounds Logo]({{< assetUrl src="soundbounds_banner.png" >}})
+![SoundBounds Logo]({{ "soundbounds_banner.png" |> assetUrl }})
 
 SoundBounds is a first-of-its-kind soundtracking mod for Minecraft,
 allowing players to define sophisticated region-based soundtracks for

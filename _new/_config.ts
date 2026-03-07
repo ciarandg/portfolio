@@ -5,6 +5,7 @@ import googleFonts from "lume/plugins/google_fonts.ts";
 
 const site = lume();
 const postsQuery = "url^=/posts/ !draft=true !archived=true";
+const assetHost = "ciarandg-portfolio.us-southeast-1.linodeobjects.com";
 
 site.add("/css/base.css");
 site.add("/css/homepage.css");
@@ -75,6 +76,12 @@ site.filter("formatDate", (date: Date) => {
     month: "short",
     day: "numeric",
   });
+});
+
+site.filter("assetUrl", (endpoint: string) => {
+  const base = new URL(`https://${assetHost}`);
+  base.pathname = endpoint;
+  return base.href;
 });
 
 export default site;

@@ -4,6 +4,7 @@ date: 2019-10-19
 draft: false
 archived: false
 type: music
+templateEngine: [vto, md]
 
 tags: ["composition", "concrete"]
 gallery: true
@@ -20,5 +21,4 @@ klangs (sampled and re-pitched by modulating playback speed with a random number
 generator) and frequent modulations that cross over and under the 20Hz threshold
 (through the use of LFOs and ring modulation).
 
-\
-{{< audio src="no_bearing.wav" type="wav" >}}
+{{ comp.audio({ src: "no_bearing.wav", type: "wav"}) }}

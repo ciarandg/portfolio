@@ -4,13 +4,14 @@ date: 2025-07-18T00:00:00-06:00
 draft: false
 archived: false
 type: blog
+templateEngine: [vto, md]
 
 tags: ["nixos", "terraform"]
 downloads: []
 blog: true
 ---
 
-{{< wrapimg src="tim-allen.jpg" alt="a beautiful portrait of Tim Allen" align="right" max-height="300px" >}}
+{{ comp.wrapimg({ src: "tim-allen.jpg", alt: "a beautiful portrait of Tim Allen", align: "right", maxHeight: "300px"}) }}
 
 Lately I've been itching to rework my homelab. As I pack up my bindle, I want to take an accounting of the frustrations and pain points in my current setup.
 

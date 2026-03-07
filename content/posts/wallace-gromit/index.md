@@ -4,6 +4,7 @@ date: 2019-11-24
 draft: false
 archived: true
 type: music
+templateEngine: [vto, md]
 
 tags: ["foley", "sound design"]
 ---
@@ -16,5 +17,4 @@ foley, particularly the incorporation of foley into a larger project. Mixing
 turned out to be the most labor-intensive part of the project, as I hoped to
 effectively convey the scene's spatial depth in stereo.
 
-\
-{{< video src="wallace_gromit.mp4" type="video/mp4" >}}
+{{ comp.video({ src: "wallace_gromit.mp4", type: "video/mp4" }) }}

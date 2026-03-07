@@ -4,13 +4,14 @@ date: 2025-06-16T00:00:00-06:00
 draft: false
 archived: false
 type: blog
+templateEngine: [vto, md]
 
 tags: ["kubernetes"]
 downloads: []
 blog: true
 ---
 
-{{< wrapimg src="glass_joe.gif" alt="Glass Joe" align="right" >}}
+{{ comp.wrapimg({ src: "glass_joe.gif", alt: "Glass Joe", align: "right" }) }}
 
 In my day job I work with EKS, where I almost exclusively rely on `LoadBalancer` and `ClusterIP` Services for external and internal networking, respectively. Things are often not so straightforward in the homelab or on local, temporary clusters, and every once in a while I find myself needing a refresher on what my other options are. Here are the four essential ways to let external traffic into your cluster:
 

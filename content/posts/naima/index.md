@@ -4,6 +4,7 @@ date: 2022-08-09
 draft: false
 archived: false
 type: project
+templateEngine: [vto, md]
 
 tags: ["discord", "kotlin", "java", "mongodb"]
 gallery: true
@@ -12,7 +13,7 @@ downloads: [
 ]
 ---
 
-![Naima voting interface]({{< assetUrl src="naima_voting.png" >}})
+![Naima voting interface]({{ "naima_voting.png" |> assetUrl }})
 
 Naima is a Discord bot that I use to manage a jazz listening club with
 friends. It is implemented in Kotlin using the

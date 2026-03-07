@@ -4,6 +4,7 @@ date: 2026-01-20T00:00:00-06:00
 draft: true
 archived: false
 type: blog
+templateEngine: [vto, md]
 
 tags: ["kubernetes", "foss"]
 downloads: []
@@ -46,7 +47,7 @@ All the work done within the Kubernetes community belongs to some SIG or WG. Con
 - **Horizontal:** Groups whose mandate is not all-encompassing but requires integration across the stack, e.g. Auth, CLI, Security.
 - **Vertical:** Groups whose mandate is encapsulated by a particular feature in the stack, e.g. Network, Node, Scheduling, Storage.
 
-{{< wrapimg src="flcl-terminal-core.jpg" caption="Pictured: Milton Friedman" alt="FLCL terminal core in dog form" align="right" max-height="400px" >}}
+{{ comp.wrapimg({ src: "flcl-terminal-core.jpg", caption: "Pictured: Milton Friedman", alt: "FLCL terminal core in dog form", align: "right", maxHeight: "400px" }) }}
 
 This structure is detailed in [governance.md](https://github.com/kubernetes/community/blob/master/governance.md#sigs). If you've ever worked for a medium-to-large software company, the need to break your organization into a 2D matrix will likely look familiar. What strikes me as remarkable, though, is how cleanly the Kubernetes organization is structured (see [slide](https://docs.google.com/presentation/d/1WB7fNdnWM3tL5c0qh2MRapQcVsqvlyaRfdldceE-AZY/edit?slide=id.g31809eea4f1_0_197#slide=id.g31809eea4f1_0_197) for a breakdown), and how few top-level groups manage to encompass the full scope of the community. Perhaps this clarity comes from producing a unified -- albeit multi-faceted -- product, unlike the sprawling complexity of enterprises who want to [grow at all costs](https://en.wikipedia.org/wiki/Friedman_doctrine).
 

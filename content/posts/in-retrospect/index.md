@@ -4,6 +4,7 @@ date: 2019-12-05
 draft: false
 archived: false
 type: music
+templateEngine: [vto, md]
 
 tags: ["composition"]
 ---
@@ -19,5 +20,4 @@ those dissonant concrete sounds to mimick the clash between his interepretation
 of the past, and the obsessive, slightly spiteful way that he uses it to debase
 and blame his love interest.
 
-\
-{{< audio src="in_retrospect.wav" type="wav" >}}
+{{ comp.audio({ src: "in_retrospect.wav", type: "wav"}) }}
