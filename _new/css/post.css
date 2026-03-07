@@ -2,6 +2,12 @@ h1 {
   margin-bottom: 5px; /* Moves date closer to title */
 }
 
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto .5em;
+}
 
 nav {
   display: grid;
