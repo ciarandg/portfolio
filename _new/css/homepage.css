@@ -1,0 +1,71 @@
+/* Post columns container */
+.post-columns {
+  display: grid; /* always grid */
+  grid-template-columns: 1fr; /* default single column */
+  gap: 2rem;
+}
+
+/* Desktop layout (double-wide) */
+@media (min-width: 800px) {
+  .post-columns {
+    grid-template-columns: 1fr 1fr; /* two columns */
+  }
+
+  body {
+    max-width: 84em; /* optional: make the page wider on desktop */
+  }
+}
+
+/* Sections inside columns */
+.post-columns section {
+  min-width: 0; /* prevents overflow for long titles */
+}
+
+/* Post listing styling */
+.post-listing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-listing li {
+  display: flex;
+  align-items: baseline;
+  padding: 0.15rem 0;
+}
+
+.post-listing .post-date {
+  margin-left: auto;
+  font-style: normal;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+/* Contact links layout */
+.contact-details ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  margin: 0;
+}
+
+.post-title {
+  display: inline;
+}
+
+.post-type {
+  font-size: 0.75em;
+  padding: 0.05rem 0.35rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  opacity: 0.8;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}

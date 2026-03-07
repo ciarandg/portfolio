@@ -1,0 +1,59 @@
+/* Default layout */
+body {
+  font-family: ibm, system-ui;
+  font-size: 1.02em;
+  margin: 2em auto;
+  background-color: black;
+  color: white;
+  max-width: 42em;
+  line-height: 1.4;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Minimal link styling */
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Basic typography */
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+/* All code snippets */
+code {
+  font-family: jetbrains, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Multiline code blocks */
+pre code {
+  font-size: 0.9em;
+  border-radius: 6px;
+  margin: 1.5em 0;
+}
+
+/* Inline code snippets */
+p > code,
+li > code,
+td > code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    background: #0d1117;
+    border-radius: 6px;
+    padding: 0.1em 0.3em;
+}
+
+.post-date {
+  opacity: 0.6;
+}

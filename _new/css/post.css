@@ -1,0 +1,24 @@
+h1 {
+  margin-bottom: 5px; /* Moves date closer to title */
+}
+
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  opacity: 0.8;
+  width: 100%;
+}
+
+#nav-previous {
+  justify-self: start;
+}
+
+#nav-home {
+  justify-self: center;
+}
+
+#nav-next {
+  justify-self: end;
+}

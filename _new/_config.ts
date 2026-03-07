@@ -6,19 +6,19 @@ import googleFonts from "lume/plugins/google_fonts.ts";
 const site = lume();
 const postsQuery = "url^=/posts/ !draft=true !archived=true";
 
-site.add("/static/base.css");
-site.add("/static/homepage.css");
-site.add("/static/post.css");
+site.add("/css/base.css");
+site.add("/css/homepage.css");
+site.add("/css/post.css");
 
 site.use(codeHighlight({
   theme: {
     name: "github-dark",
-    cssFile: "/static/highlight.css",
+    cssFile: "/css/highlight.css",
   },
 }));
 
 site.use(googleFonts({
-  cssFile: "static/fonts.css",
+  cssFile: "css/fonts.css",
   fonts: {
     ibm:
       "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap",
