@@ -58,6 +58,7 @@
 
 .post-title {
   display: inline;
+  margin-right: 0.4rem;
 }
 
 .post-type {
@@ -66,6 +67,5 @@
   border: 1px solid #444;
   border-radius: 4px;
   opacity: 0.8;
-  margin-left: 0.4rem;
   margin-right: 0.4rem;
 }
