@@ -4,7 +4,6 @@ date: 2019-11-24
 draft: false
 archived: true
 type: music
-templateEngine: [vto, md]
 
 tags: ["foley", "sound design"]
 ---

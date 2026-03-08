@@ -1,7 +1,6 @@
 ---
 layout: homepage.vto
 title: Ciaran De Groot
-templateEngine: [vto, md]
 ---
 I'm Ciaran. I write code, and sometimes I write here.
 

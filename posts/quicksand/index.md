@@ -4,7 +4,6 @@ date: 2021-04-21
 draft: false
 archived: false
 type: project
-templateEngine: [vto, md]
 
 tags: ["vst", "juce", "c++", "effect", "interactive"]
 gallery: true

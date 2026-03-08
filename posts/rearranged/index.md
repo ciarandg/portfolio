@@ -4,7 +4,6 @@ date: 2019-12-10
 draft: false
 archived: false
 type: music
-templateEngine: [vto, md]
 
 tags: ["composition"]
 gallery: true

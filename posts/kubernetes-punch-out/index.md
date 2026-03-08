@@ -4,7 +4,6 @@ date: 2025-06-16T00:00:00-06:00
 draft: false
 archived: false
 type: blog
-templateEngine: [vto, md]
 
 tags: ["kubernetes"]
 downloads: []

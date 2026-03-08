@@ -4,7 +4,6 @@ date: 2019-10-19
 draft: false
 archived: false
 type: music
-templateEngine: [vto, md]
 
 tags: ["composition", "concrete"]
 gallery: true

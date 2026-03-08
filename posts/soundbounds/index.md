@@ -4,7 +4,6 @@ date: 2021-07-24
 draft: false
 archived: false
 type: project
-templateEngine: [vto, md]
 
 tags: ["mod", "openal", "kotlin", "java", "interactive", "gaming"]
 gallery: true

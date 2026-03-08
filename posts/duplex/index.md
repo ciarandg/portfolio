@@ -4,7 +4,6 @@ date: 2020-03-06
 draft: false
 archived: false
 type: project
-templateEngine: [vto, md]
 
 tags: ["max", "instrument", "interactive"]
 gallery: true

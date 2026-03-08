@@ -11,6 +11,10 @@ site.add("/css/base.css");
 site.add("/css/homepage.css");
 site.add("/css/post.css");
 
+site.preprocess([".md"], (pages) => {
+  pages.forEach((page) => page.data.templateEngine = ["vto", "md"]);
+});
+
 site.use(codeHighlight({
   theme: {
     name: "github-dark",

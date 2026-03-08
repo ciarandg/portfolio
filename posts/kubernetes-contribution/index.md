@@ -4,7 +4,6 @@ date: 2026-01-20T00:00:00-06:00
 draft: true
 archived: false
 type: blog
-templateEngine: [vto, md]
 
 tags: ["kubernetes", "foss"]
 downloads: []
