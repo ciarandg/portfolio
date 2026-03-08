@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/highlight.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/post.css" />
+  </head>
+  <body>
+    <nav>
+      {{ set previousUrl = search.previousPage(url, postsQuery, "date=asc")?.url }}
+      {{ set nextUrl = search.nextPage(url, postsQuery, "date=asc")?.url }}
+
+      {{ if previousUrl }}
+      <a href="{{ previousUrl }}" id="nav-previous">← Previous</a>
+      {{ else }}
+      <!-- Empty #nav-previous needs a placeholder since <nav> is 3-column -->
+      <a id="nav-previous"></a>
+      {{ /if }}
+
+      <a href="/" id="nav-home">Home</a>
+
+      {{ if nextUrl }}
+      <a href="{{ nextUrl }}" id="nav-next">→ Next</a>
+      {{ else }}
+      <!-- Empty #nav-next needs a placeholder since <nav> is 3-column -->
+      <a id="nav-next"></a>
+      {{ /if }}
+    </nav>
+    <hr />
+    <h1>{{ title }}</h1>
+    <span class="post-type">{{ type }}</span>
+    <span class="post-date">{{ date |> formatDate }}</span>
+    {{ content }}
+  </body>
+</html>

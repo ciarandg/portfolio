@@ -1,8 +1,0 @@
-<figure class="image-wrap wrap-{{ .Get "align" | default "right" }}"
-     style="max-width: {{ .Get "max-width" | default "30%" }};">
-  <img
-    src="{{ .Site.Params.assets_bucket_url }}/{{ .Get "src" }}"
-    alt="{{ .Get "alt" }}"
-    style="max-height: {{ .Get "max-height" | default "none" }};" />
-  <span class="image-caption">{{ .Get "caption" }}</span>
-</figure>

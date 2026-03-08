@@ -1,4 +1,4 @@
-public
-.hugo_build.lock
-result
+_site
+_cache
+.env
 static

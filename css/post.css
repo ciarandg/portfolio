@@ -1,0 +1,56 @@
+h1 {
+  margin-bottom: 5px; /* Moves date closer to title */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto .5em;
+}
+
+video {
+    max-width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  opacity: 0.8;
+  width: 100%;
+}
+
+#nav-previous {
+  justify-self: start;
+}
+
+#nav-home {
+  justify-self: center;
+}
+
+#nav-next {
+  justify-self: end;
+}
+
+.image-wrap {
+  margin: 0 1em 1em 0;
+  display: inline-block;
+}
+
+.wrap-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.wrap-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.image-caption {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  opacity: 0.6;
+}

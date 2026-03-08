@@ -1,0 +1,8 @@
+<figure class="image-wrap wrap-{{ align || "right" }}"
+     style="max-width: {{ maxWidth || "30%" }};">
+  <img
+    src="{{ src |> assetUrl }}"
+    alt="{{ alt }}"
+    style="max-height: {{ maxHeight || "none" }};" />
+  <span class="image-caption">{{ caption }}</span>
+</figure>
