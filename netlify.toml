@@ -1,3 +1,8 @@
+# Annoyingly, I have to curl-into-sh here because Netlify ships an outdated version of Deno
+
 [build]
   publish = "_site"
-  command = "deno task build"
+  command = """
+  curl -fsSL https://deno.land/install.sh | sh && \
+  /opt/buildhome/.deno/bin/deno task build \
+"""
