@@ -2,12 +2,18 @@ import lume from "lume/mod.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import feed from "lume/plugins/feed.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
+import callouts from "npm:markdown-it-obsidian-callouts@0.3.3";
 
-const site = lume();
+const markdown = {
+  plugins: [callouts],
+};
+
+const site = lume({}, { markdown });
 const postsQuery = "url^=/posts/ !draft=true !archived=true";
 const assetHost = "ciarandg-portfolio.us-southeast-1.linodeobjects.com";
 
 site.add("/css/base.css");
+site.add("/css/callouts.css");
 site.add("/css/homepage.css");
 site.add("/css/post.css");
 

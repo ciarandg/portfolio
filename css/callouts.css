@@ -1,0 +1,92 @@
+.callout {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid;
+}
+
+/* Title row */
+
+.callout-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Icon */
+
+.callout-title-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.4rem;
+}
+
+.callout-title-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Title text */
+
+.callout-title-inner {
+  font-size: 0.9em;
+}
+
+/* Content spacing */
+
+.callout-content > :first-child {
+  margin-top: 0;
+}
+
+.callout-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* -------------------------------- */
+/* GitHub callout colors            */
+/* -------------------------------- */
+
+.callout[data-callout="note"] {
+  border-color: #1f6feb;
+}
+
+.callout[data-callout="note"] svg,
+.callout[data-callout="note"] .callout-title-inner {
+  color: #1f6feb;
+}
+
+.callout[data-callout="tip"] {
+  border-color: #2da44e;
+}
+
+.callout[data-callout="tip"] svg,
+.callout[data-callout="tip"] .callout-title-inner {
+  color: #2da44e;
+}
+
+.callout[data-callout="important"] {
+  border-color: #8250df;
+}
+
+.callout[data-callout="important"] svg,
+.callout[data-callout="important"] .callout-title-inner {
+  color: #8250df;
+}
+
+.callout[data-callout="warning"] {
+  border-color: #d29922;
+}
+
+.callout[data-callout="warning"] svg,
+.callout[data-callout="warning"] .callout-title-inner {
+  color: #d29922;
+}
+
+.callout[data-callout="caution"] {
+  border-color: #cf222e;
+}
+
+.callout[data-callout="caution"] svg,
+.callout[data-callout="caution"] .callout-title-inner {
+  color: #cf222e;
+}
