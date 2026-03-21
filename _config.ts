@@ -1,21 +1,28 @@
 import lume from "lume/mod.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import feed from "lume/plugins/feed.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 import googleFonts from "lume/plugins/google_fonts.ts";
 import callouts from "npm:markdown-it-obsidian-callouts@0.3.3";
+import {
+  drop,
+  formatDate,
+  POSTS_QUERY,
+  shuffle,
+  take,
+} from "./utils/helpers.ts";
 
 const markdown = {
   plugins: [callouts],
 };
 
 const site = lume({}, { markdown });
-const postsQuery = "url^=/posts/ !draft=true !archived=true";
 const assetHost = "ciarandg-portfolio.us-southeast-1.linodeobjects.com";
 
-site.add("/css/base.css");
-site.add("/css/callouts.css");
-site.add("/css/homepage.css");
-site.add("/css/post.css");
+site.use(esbuild());
+
+site.add("/css");
+site.add("/js");
 
 site.preprocess([".md"], (pages) => {
   pages.forEach((page) => page.data.templateEngine = ["vto", "md"]);
@@ -38,11 +45,12 @@ site.use(googleFonts({
   },
 }));
 
-site.data("postsQuery", postsQuery);
+site.data("postsQuery", POSTS_QUERY);
 
 site.use(feed({
   output: ["/posts.rss", "/posts.json"],
-  query: postsQuery,
+  query: POSTS_QUERY,
+  limit: 999,
   info: {
     title: "=site.title",
     description: "=site.description",
@@ -53,41 +61,10 @@ site.use(feed({
   },
 }));
 
-site.filter("shuffle", (array: unknown[]) => {
-  let currentIndex = array.length;
-
-  // While there remain elements to shuffle...
-  while (currentIndex != 0) {
-    // Pick a remaining element...
-    const randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-
-  return array;
-});
-
-site.filter("take", (array: unknown[], count: number) => {
-  return array.slice(0, count);
-});
-
-site.filter("drop", (array: unknown[], count: number) => {
-  return array.slice(count);
-});
-
-site.filter("formatDate", (date: Date) => {
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-});
-
+site.filter("shuffle", shuffle);
+site.filter("take", take);
+site.filter("drop", drop);
+site.filter("formatDate", formatDate);
 site.filter("assetUrl", (endpoint: string) => {
   const base = new URL(`https://${assetHost}`);
   base.pathname = endpoint;
