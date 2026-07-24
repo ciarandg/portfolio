@@ -11,7 +11,7 @@ blog: true
 tableOfContents: true
 ---
 
-In my [previous post](/archive/homelab-ugly/), I described the issues I've been having with my current homelab. I'm still working on the replacement, so this post is going to describe the intermediary state my homelab is currently in, my initial impressions of [Talos Linux](https://www.talos.dev/), and some hurdles I've run into along the way.
+In my [previous post](/posts/homelab-ugly/), I described the issues I've been having with my current homelab. I'm still working on the replacement, so this post is going to describe the intermediary state my homelab is currently in, my initial impressions of [Talos Linux](https://www.talos.dev/), and some hurdles I've run into along the way.
 
 ## The Appeal of Talos
 
